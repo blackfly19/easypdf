@@ -64,6 +64,7 @@ func (mdpdf *MdToPdf) ConvertFileToPDF() error {
 
 	page := htmltopdf.NewPageReader(pdfBytes)
 	page.EnableLocalFileAccess.Set(true)
+	page.Encoding.Set("UTF-8")
 
 	pdfg.AddPage(page)
 
